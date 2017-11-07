@@ -1,7 +1,8 @@
 buildscript {
 	ext {
 		kotlinVersion = '1.1.51'
-		springBootVersion = '2.0.0.M6'
+		springBootVersion = '2.0.0.BUILD-SNAPSHOT'
+		springVersion = '5.0.0.BUILD-SNAPSHOT'
 	}
 	repositories {
 		mavenCentral()
@@ -40,6 +41,8 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-webflux')
+	compile("org.springframework:spring-context-support:${springVersion}")
+	compile('org.freemarker:freemarker')
 	compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
 	compile("org.jetbrains.kotlin:kotlin-reflect")
 	testCompile('org.springframework.boot:spring-boot-starter-test')
